@@ -16,15 +16,16 @@ export default function TimeDisplay({
     return <span className="title is-2">--:--</span>;
   }
   console.log(dateTimeString);
-  const date = new Date(dateTimeString);
+  const time = dateTimeString.endsWith("Z")
+    ? dateTimeString.substring(0, 5)
+    : dateTimeString.substring(0, 5);
 
-  return (
-    <span className="title is-2">
-      {date.toLocaleTimeString("en-US", {
-        hour: "2-digit",
-        minute: "2-digit",
-        hour12: false,
-      })}
-    </span>
-  );
+  console.log(time);
+  // Convert to local time if needed
+  const date = new Date(`2000-01-01T${time}`);
+  return date.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  });
 }
