@@ -1,4 +1,4 @@
-import { RaceData } from "@/types/session_detail";
+import { RaceData, Session } from "@/types/session_detail";
 
 const sessionNameMap: Record<string, string> = {
   fp1: "Free Practice 1",
@@ -11,7 +11,7 @@ const sessionNameMap: Record<string, string> = {
   sprint_shootout: "Sprint Shootout",
 };
 
-// Session type mapping for styling
+// Sessions type mapping for styling
 const sessionTypeMap: Record<string, string> = {
   fp1: "practice",
   fp2: "practice",
@@ -23,7 +23,7 @@ const sessionTypeMap: Record<string, string> = {
   sprint_qualifying: "sprint_qualifying",
 };
 
-interface Session {
+interface Sessions {
   id: string;
   key: string;
   name: string;
@@ -37,7 +37,7 @@ export function sortSessions(RaceData: RaceData) {
   const race = RaceData.race.sessions.race;
 
   // Dynamically build sessions array based on available data
-  const allSessions: Session[] = [];
+  const allSessions: Sessions[] = [];
 
   // Check for different session types in the data
   if (race.FirstPractice) {

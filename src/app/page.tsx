@@ -7,7 +7,7 @@ import RaceTimetable from "./components/RaceTimetable";
 export default async function Home() {
   // Quick way to reformat date to an iso string
   const raceData = await getRaceData();
-  console.log(raceData);
+  // console.log(raceData);
   const formatDateTime = (date: string, time: string) => {
     return new Date(`${date}T${time}`).toLocaleString();
   };

@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
 
-import { RaceData } from "@/types/session_detail";
-
-export function getRaceData(): RaceData {
+export function getRaceData() {
   try {
     if (typeof window === "undefined") {
       const filePath = path.join(
@@ -21,17 +19,19 @@ export function getRaceData(): RaceData {
     // Fallback data if file doesn't exist
     return {
       lastUpdated: new Date().toISOString(),
-      raceName: "Loading...",
-      circuitName: "Loading...",
-      country: "",
-      location: "",
-      raceDate: "",
-      raceTime: "",
-      sessions: {
-        qualifying: { date: "", time: "" },
-        race: { date: "", time: "" },
+      race: {
+        name: "string",
+        circuit: "string",
+        date: "Date",
+        time: "",
+        sessions: {
+          fp1: { date: "", time: "" },
+          fp2: { date: "", time: "" },
+          fp3: { date: "", time: "" },
+          qualifying: { date: "", time: "" },
+          race: { date: "", time: "" },
+        },
       },
-      round: 0,
     };
   }
 }

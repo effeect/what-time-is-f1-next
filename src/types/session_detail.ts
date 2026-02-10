@@ -1,5 +1,5 @@
 // For each individual session
-type Session = {
+export type Session = {
   date: string;
   time: string;
 };
@@ -12,11 +12,18 @@ export type RaceData = {
     date: string;
     time: string;
     sessions: {
-      fp1: Session;
-      fp2: Session;
-      fp3: Session;
-      qualifying: Session;
-      race: Session;
+      race: RaceSessions;
     };
   };
 };
+
+export interface RaceSessions {
+  FirstPractice?: Session;
+  SecondPractice?: Session;
+  ThirdPractice?: Session;
+  Qualifying?: Session;
+  Sprint?: Session;
+  SprintQualifying?: Session;
+  date: string; // The main race date
+  time: string; // The main race time
+}
