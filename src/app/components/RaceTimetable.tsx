@@ -1,5 +1,6 @@
 import { RaceData } from "@/types/session_detail";
 import { sortSessions } from "@/lib/sessionSort";
+import TimeDisplay from "./atoms/Time/TimeDisplay";
 
 interface RaceTimetableProps {
   RaceData: RaceData;
@@ -94,7 +95,9 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
                 {/* Right hand side of the container */}
                 <div className="level-right">
                   <div>
-                    <p className="title is-2">{formatTime(session.time)}</p>
+                    <TimeDisplay
+                      dateTimeString={`${session.date}:${session.time}`}
+                    />
                   </div>
                   {/* <p className="title is-4">{formatTimeUTC(session.time)}</p> */}
                 </div>
