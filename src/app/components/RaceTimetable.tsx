@@ -1,5 +1,3 @@
-"use client";
-import { useState, useEffect } from "react";
 import { RaceData } from "@/types/session_detail";
 import { sortSessions } from "@/lib/sessionSort";
 
@@ -18,15 +16,10 @@ interface Session {
 }
 
 export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
-  const [raceData, setRaceData] = useState(RaceData);
+  const raceData = RaceData;
   const sessionData = RaceData.race.sessions.race;
-  const [sessions, setSessions] = useState<Session[]>([]);
 
-  // Initialize sessions from RaceData
-  useEffect(() => {
-    setSessions(sortSessions(raceData));
-    setRaceData(RaceData);
-  }, [RaceData]);
+  const sessions = sortSessions(RaceData);
 
   // Format date for display
   const formatDate = (dateString: string) => {
