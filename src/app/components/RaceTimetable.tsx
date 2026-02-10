@@ -96,7 +96,9 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
                 <div className="level-right">
                   <div>
                     <p className="title is-4">
-                      <TimeDisplay dateTimeString={`${session.time}`} />
+                      <TimeDisplay
+                        dateTimeString={`${session.date}T${session.time}`}
+                      />
                     </p>
                   </div>
                   {/* <p className="title is-4">{formatTimeUTC(session.time)}</p> */}
