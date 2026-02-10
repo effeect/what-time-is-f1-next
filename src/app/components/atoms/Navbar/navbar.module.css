@@ -1,0 +1,11 @@
+.logoText {
+  font-weight: bold;
+  font-size: 2rem;
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.centeredBrand {
+  justify-content: center;
+  width: 100%;
+}

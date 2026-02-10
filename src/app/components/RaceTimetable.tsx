@@ -59,13 +59,13 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
 
   return (
     <div className="container my-2">
-      <div className="box">
-        <div className="columns is-vcentered">
-          <div className="column is-three-quarters">
+      <div>
+        <div className="columns is-vcentered has-text-centered">
+          <div className="column">
             <h1 className="title is-2 mb-2">
               Next race is the {raceData.race.name}
             </h1>
-            <div className="subtitle has-text-light">
+            <div className="subtitle">
               <span className="icon">
                 <i className="fas fa-flag-checkered"></i>
               </span>
@@ -81,7 +81,7 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
                 {/* Left hand side of the container */}
                 <div className="level-left">
                   <div>
-                    <p className="heading mb-2">{session.name}</p>
+                    <p className="heading mb-1">{session.name}</p>
                     <p className="title is-5">
                       {new Date(session.date).toLocaleDateString(undefined, {
                         weekday: "long",
@@ -93,7 +93,9 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
                 </div>
                 {/* Right hand side of the container */}
                 <div className="level-right">
-                  <p className="title is-4">{formatTime(session.time)}</p>
+                  <div>
+                    <p className="title is-2">{formatTime(session.time)}</p>
+                  </div>
                   {/* <p className="title is-4">{formatTimeUTC(session.time)}</p> */}
                 </div>
               </div>
