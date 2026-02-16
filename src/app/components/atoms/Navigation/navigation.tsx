@@ -1,10 +1,17 @@
 import React from "react";
 import Link from "next/link";
 
-const NavigationBar = ({ data, currentIndex }: any) => {
+const NavigationBar = ({
+  data,
+  currentIndex,
+}: {
+  data: any;
+  currentIndex: number;
+}) => {
+  console.log(currentIndex);
   // Need to do some work for this
-  const prevRace = data.customRaceData[currentIndex - 1];
-  const nextRace = data.customRaceData[currentIndex + 1];
+  const prevRace = data.customRaceData[Number(currentIndex) - 1];
+  const nextRace = data.customRaceData[Number(currentIndex) + 1];
 
   return (
     <>
@@ -32,6 +39,7 @@ const NavigationBar = ({ data, currentIndex }: any) => {
           <div />
         )}
       </div>
+      <div className="my-4"></div>
     </>
   );
 };

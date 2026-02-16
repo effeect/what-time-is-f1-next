@@ -8,7 +8,7 @@ export function getYearRaceData() {
         process.cwd(),
         "public",
         "data",
-        "year_schedule_2026.json",
+        "year_schedule.json",
       );
       const jsonData = fs.readFileSync(filePath, "utf-8");
       return JSON.parse(jsonData);

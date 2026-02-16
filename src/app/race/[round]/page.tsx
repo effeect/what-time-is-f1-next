@@ -3,7 +3,6 @@ import Navbar from "@/app/components/atoms/Navbar/navbar";
 import RaceTimetable from "@/app/components/RaceTimetable";
 import { getYearRaceData } from "@/lib/data_year";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import NavigationBar from "@/app/components/atoms/Navigation/navigation";
 
 // Grab the static params for each round from the year schedule data
@@ -13,6 +12,30 @@ export async function generateStaticParams() {
   return yearRaceData.customRaceData.map((item: any) => ({
     round: item.race.sessions.race.round,
   }));
+}
+// For metadata stuff
+export async function generateMetadata(props: {
+  params: Promise<{ round: string }>;
+}) {
+  const params = await props.params;
+  const data = await getYearRaceData();
+  const raceEntry = data.customRaceData.find(
+    (item: any) => item.race.sessions.race.round === params.round,
+  );
+
+  console.log(raceEntry);
+  return {
+    metadataBase: new URL("https://oliverdimes.dev"),
+    alternates: {
+      canonical: "/",
+    },
+    title: `What time is F1? - ${raceEntry?.race.name} Schedule`,
+    description: `The schedule for the ${params.round} race`,
+    keywords: "Formula 1, F1, Race Schedule",
+    openGraph: {
+      images: ["/default-preview.png"],
+    },
+  };
 }
 
 export default async function RoundPage({
@@ -25,10 +48,6 @@ export default async function RoundPage({
   const currentIndex = data.customRaceData.findIndex(
     (item: any) => item.race.sessions.race.round === round,
   );
-  const prevRace = data.customRaceData[currentIndex - 1];
-  const nextRace = data.customRaceData[currentIndex + 1];
-  console.log(prevRace);
-  console.log(nextRace);
   const raceEntry = data.customRaceData.find(
     (item: any) => item.race.sessions.race.round === round,
   );
@@ -37,7 +56,7 @@ export default async function RoundPage({
     notFound();
   }
   const race = raceEntry;
-  console.log(race);
+
   return (
     <>
       <Navbar />
