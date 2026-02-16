@@ -65,6 +65,28 @@ export function sortSessions(RaceData: RaceData) {
     });
   }
 
+  if (race.SprintQualifying) {
+    allSessions.push({
+      id: "sprint_qualifying",
+      key: "sprint_qualifying",
+      name: sessionNameMap.sprint_qualifying,
+      sessionType: sessionTypeMap.sprint_qualifying,
+      date: race.SprintQualifying.date,
+      time: race.SprintQualifying.time,
+    });
+  }
+
+  if (race.Sprint) {
+    allSessions.push({
+      id: "sprint",
+      key: "sprint",
+      name: sessionNameMap.sprint,
+      sessionType: sessionTypeMap.sprint,
+      date: race.Sprint.date,
+      time: race.Sprint.time,
+    });
+  }
+
   // Check if this is a sprint race or not
   if (race.ThirdPractice) {
     const isSprintWeekend = race.Sprint || race.SprintQualifying;

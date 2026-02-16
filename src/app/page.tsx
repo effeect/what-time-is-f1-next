@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { GetStaticProps } from "next";
 import { getRaceData } from "@/lib/data";
+import { getYearRaceData } from "@/lib/data_year";
 import RaceTimetable from "./components/RaceTimetable";
 import Navbar from "./components/atoms/Navbar/navbar";
 import Footer from "./components/atoms/Footer/Footer";
