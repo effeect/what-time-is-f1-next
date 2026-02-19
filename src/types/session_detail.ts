@@ -14,6 +14,7 @@ export type RaceData = {
     sessions: {
       race: RaceSessions;
     };
+    isNextRace: boolean;
   };
 };
 

@@ -8,7 +8,6 @@ import NavigationBar from "@/app/components/atoms/Navigation/navigation";
 // Grab the static params for each round from the year schedule data
 export async function generateStaticParams() {
   const yearRaceData = await getYearRaceData();
-  console.log(yearRaceData.customRaceData);
   return yearRaceData.customRaceData.map((item: any) => ({
     round: item.race.sessions.race.round,
   }));
@@ -23,7 +22,6 @@ export async function generateMetadata(props: {
     (item: any) => item.race.sessions.race.round === params.round,
   );
 
-  console.log(raceEntry);
   return {
     metadataBase: new URL("https://oliverdimes.dev"),
     alternates: {
@@ -45,13 +43,14 @@ export default async function RoundPage({
 }) {
   const { round } = await params;
   const data = await getYearRaceData();
+  console.log(data);
   const currentIndex = data.customRaceData.findIndex(
     (item: any) => item.race.sessions.race.round === round,
   );
   const raceEntry = data.customRaceData.find(
     (item: any) => item.race.sessions.race.round === round,
   );
-
+  console.log(raceEntry);
   if (!raceEntry) {
     notFound();
   }

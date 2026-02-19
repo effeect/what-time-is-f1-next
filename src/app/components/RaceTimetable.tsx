@@ -64,13 +64,24 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
         <div className="columns is-vcentered has-text-centered">
           <div className="column">
             <h1 className="title is-2 mb-2">
-              Next race is the {raceData.race.name}
+              {raceData.race.isNextRace
+                ? "Next Race is the "
+                : "Race Timetable for the "}
+              {raceData.race.name}
             </h1>
             <div className="subtitle">
               <span className="icon">
                 <i className="fas fa-flag-checkered"></i>
               </span>
               <span className="ml-2">{raceData.race.circuit}</span>
+            </div>
+            <div className="subtitle">
+              <span className="icon">
+                <i className="fas fa-calendar-alt"></i>
+              </span>
+              <span className="ml-2">
+                Main event on {formatDate(sessionData.date)}
+              </span>
             </div>
           </div>
         </div>

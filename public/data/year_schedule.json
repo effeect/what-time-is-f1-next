@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-16T06:16:18.271Z",
+  "lastUpdated": "2026-02-19T02:26:37.839Z",
   "customRaceData": [
     {
       "race": {
@@ -59,7 +59,8 @@
               "time": "05:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": true
       }
     },
     {
@@ -120,7 +121,8 @@
               "time": "07:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -181,7 +183,8 @@
               "time": "06:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -242,7 +245,8 @@
               "time": "16:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -303,7 +307,8 @@
               "time": "17:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -364,7 +369,8 @@
               "time": "20:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -425,7 +431,8 @@
               "time": "20:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -486,7 +493,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -547,7 +555,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -608,7 +617,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -669,7 +679,8 @@
               "time": "15:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -730,7 +741,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -791,7 +803,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -852,7 +865,8 @@
               "time": "14:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -913,7 +927,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -974,7 +989,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1035,7 +1051,8 @@
               "time": "12:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1047,7 +1064,7 @@
         "sessions": {
           "fp1": {
             "date": "2026-10-09",
-            "time": "09:30:00Z"
+            "time": "08:30:00Z"
           },
           "sprintqualifying": {
             "date": "2026-10-09",
@@ -1081,7 +1098,7 @@
             "time": "12:00:00Z",
             "FirstPractice": {
               "date": "2026-10-09",
-              "time": "09:30:00Z"
+              "time": "08:30:00Z"
             },
             "Qualifying": {
               "date": "2026-10-10",
@@ -1096,7 +1113,8 @@
               "time": "12:30:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1157,7 +1175,8 @@
               "time": "21:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1218,7 +1237,8 @@
               "time": "21:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1279,7 +1299,8 @@
               "time": "18:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1340,7 +1361,8 @@
               "time": "04:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1401,7 +1423,8 @@
               "time": "18:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     },
     {
@@ -1462,7 +1485,8 @@
               "time": "14:00:00Z"
             }
           }
-        }
+        },
+        "isNextRace": false
       }
     }
   ]

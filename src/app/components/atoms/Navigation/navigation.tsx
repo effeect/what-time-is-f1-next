@@ -12,31 +12,36 @@ const NavigationBar = ({
   // Need to do some work for this
   const prevRace = data.customRaceData[Number(currentIndex) - 1];
   const nextRace = data.customRaceData[Number(currentIndex) + 1];
-
+  console.log(nextRace);
   return (
     <>
       {/* Navigation Controls */}
-      <div className="container has-text-centered">
+      {/* Previous Button */}
+      <div className="buttons is-centered mt-4">
         {prevRace ? (
           <Link
             href={`/race/${prevRace.race.sessions.race.round}`}
             className="button is-link mr-2"
           >
-            ← Previous Race
+            ← {prevRace.race.name}
           </Link>
         ) : (
-          <div />
+          <button className="button is-link mr-2" disabled>
+            Previous Race
+          </button>
         )}
-        {/* <div className="md-1" /> */}
+        {/* Next Button*/}
         {nextRace ? (
           <Link
             href={`/race/${nextRace.race.sessions.race.round}`}
             className="button is-link ml-2"
           >
-            Next Race →
+            {nextRace.race.name} →
           </Link>
         ) : (
-          <div />
+          <button className="button is-link mr-2" disabled>
+            Next Race →
+          </button>
         )}
       </div>
       <div className="my-4"></div>
