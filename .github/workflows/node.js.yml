@@ -6,34 +6,31 @@ permissions:
 name: Get Race Schedule
 on:
   schedule:
-    - cron: '0 9 * * *'
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    - cron: '0 9 * * 1'
   workflow_dispatch: # Needed to allow for manual workflow runs (mostly for testing)
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 22
         cache: 'npm'
-    - run: node src/api/get-schedule.js 
-    
-    - name: Commit and Push
+        
+    # Below is what will fetch the data, note that we don't use any node packages to so no npm install needed
+    - name: Fetch Race Data
+      run: |
+        node src/api/get-schedule.js 
+        node src/api/get-year-schedule.js
+    - name: Commit and Push Changes
       run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add ./public/data/schedule.json
-          git commit -m "chore: update generated file" || echo "No changes to commit"
+          git add ./public/data/year_schedule.json
+          git commit -m "chore: update generated files" || echo "No changes to commit"
           git push
