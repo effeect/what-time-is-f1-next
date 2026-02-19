@@ -1,10 +1,10 @@
 import Footer from "@/app/components/atoms/Footer/Footer";
 import Navbar from "@/app/components/atoms/Navbar/navbar";
-import RaceTimetable from "@/app/components/RaceTimetable";
+import RaceTimetable from "@/app/components/organisms/RaceTimetable";
 import { getYearRaceData } from "@/lib/data_year";
 import { notFound } from "next/navigation";
 import NavigationBar from "@/app/components/atoms/Navigation/navigation";
-
+import Link from "next/link";
 // Grab the static params for each round from the year schedule data
 export async function generateStaticParams() {
   const yearRaceData = await getYearRaceData();

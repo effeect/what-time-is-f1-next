@@ -1,4 +1,4 @@
-import { RaceData, Session } from "@/types/session_detail";
+import { RaceData, Sessions } from "@/types/session_detail";
 
 const sessionNameMap: Record<string, string> = {
   fp1: "Free Practice 1",
@@ -22,16 +22,6 @@ const sessionTypeMap: Record<string, string> = {
   sprint_shootout: "sprint_qualifying",
   sprint_qualifying: "sprint_qualifying",
 };
-
-interface Sessions {
-  id: string;
-  key: string;
-  name: string;
-  sessionType: string;
-  date: string;
-  time: string;
-  isRace?: boolean;
-}
 
 export function sortSessions(RaceData: RaceData) {
   const race = RaceData.race.sessions.race;

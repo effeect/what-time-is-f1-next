@@ -4,6 +4,16 @@ export type Session = {
   time: string;
 };
 
+export interface Sessions {
+  id: string;
+  key: string;
+  name: string;
+  sessionType: string;
+  date: string;
+  time: string;
+  isRace?: boolean;
+}
+
 export type RaceData = {
   lastUpdated: string;
   race: {
