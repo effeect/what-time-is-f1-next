@@ -1,8 +1,6 @@
 import { RaceData } from "@/types/session_detail";
 import { sortSessions } from "@/lib/sessionSort";
-import TimeDisplay from "../atoms/Time/TimeDisplay";
 import RaceHeader from "../atoms/Header/Header";
-import { Session } from "inspector/promises";
 import SessionRow from "../atoms/SessionRow/SessionRow";
 import Link from "next/link";
 interface RaceTimetableProps {

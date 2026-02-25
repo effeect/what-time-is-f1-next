@@ -17,7 +17,7 @@ export default function Footer() {
             </Link>{" "}
             and{" "}
             <Link
-              href="https://github.com/effeect/the-blog-project/tree/main"
+              href="https://github.com/effeect/what-time-is-f1-next"
               className="has-text-link"
             >
               GitHub

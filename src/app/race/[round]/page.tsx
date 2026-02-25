@@ -4,7 +4,6 @@ import RaceTimetable from "@/app/components/organisms/RaceTimetable";
 import { getYearRaceData } from "@/lib/data_year";
 import { notFound } from "next/navigation";
 import NavigationBar from "@/app/components/atoms/Navigation/navigation";
-import Link from "next/link";
 // Grab the static params for each round from the year schedule data
 export async function generateStaticParams() {
   const yearRaceData = await getYearRaceData();
@@ -43,14 +42,14 @@ export default async function RoundPage({
 }) {
   const { round } = await params;
   const data = await getYearRaceData();
-  console.log(data);
+  // console.log(data);
   const currentIndex = data.customRaceData.findIndex(
     (item: any) => item.race.sessions.race.round === round,
   );
   const raceEntry = data.customRaceData.find(
     (item: any) => item.race.sessions.race.round === round,
   );
-  console.log(raceEntry);
+  // console.log(raceEntry);
   if (!raceEntry) {
     notFound();
   }
@@ -64,7 +63,6 @@ export default async function RoundPage({
           <RaceTimetable RaceData={race} />
         </div>
         <NavigationBar data={data} currentIndex={currentIndex} />
-
         <Footer />
       </section>
     </>

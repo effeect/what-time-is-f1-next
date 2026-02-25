@@ -18,7 +18,7 @@ export default function TimeDisplay({
   }
   const time = dateTimeString;
 
-  console.log(time);
+  // console.log(time);
   // Convert to local time if needed
   const date = new Date(`${time}`);
   return date.toLocaleTimeString("en-US", {
