@@ -38,14 +38,11 @@ export async function generateMetadata(props: {
 export default async function RoundPage({
   params,
 }: {
-  params: Promise<{ round: string }>;
+  params: Promise<{ round: number }>;
 }) {
   const { round } = await params;
   const data = await getYearRaceData();
   // console.log(data);
-  const currentIndex = data.customRaceData.findIndex(
-    (item: any) => item.race.sessions.race.round === round,
-  );
   const raceEntry = data.customRaceData.find(
     (item: any) => item.race.sessions.race.round === round,
   );
@@ -62,7 +59,9 @@ export default async function RoundPage({
         <div className="hero-body">
           <RaceTimetable RaceData={race} />
         </div>
-        <NavigationBar data={data} currentIndex={currentIndex} />
+        <div className="content is-medium" style={{}}>
+          <NavigationBar data={data} round={round} />
+        </div>
         <Footer />
       </section>
     </>
