@@ -32,7 +32,9 @@ const NavigationBar = ({ data, round }: { data: any; round: number }) => {
 
         {/* Current Status */}
         <p className="control">
-          <span className="button is-static">Race {roundNumber} of 24</span>
+          <span className="button is-static">
+            Race {roundNumber} of {data.customRaceData.length}
+          </span>
         </p>
 
         {/* Next Button */}
