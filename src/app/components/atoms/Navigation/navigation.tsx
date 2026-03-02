@@ -13,38 +13,51 @@ const NavigationBar = ({ data, round }: { data: any; round: number }) => {
   return (
     <>
       {/* Navigation Controls */}
-      <div className="field is-grouped is-grouped-centered mt-6">
+      <div className="field is-mobile is-grouped is-grouped-centered mt-6">
         {/* Previous Button */}
-        <p className="control">
+        <p className="control ">
           {prevRace ? (
             <Link
               href={`/race/${prevRace.race.sessions.race.round}`}
-              className="button"
+              className="button is-fullwidth"
             >
-              ← {prevRace.race.name}
+              <span>←</span>
+              {/* Shows race name on Desktop, hides on Mobile */}
+              <span className="is-hidden-mobile ml-1">
+                {prevRace.race.name}
+              </span>
+              {/* Shows 'Prev' on Mobile, hides on Desktop */}
+              <span className="is-hidden-tablet ml-1">Prev</span>
             </Link>
           ) : (
-            <button className="button" disabled>
-              ← Previous
+            <button className="button is-fullwidth" disabled>
+              ← Prev
             </button>
           )}
         </p>
 
         {/* Current Status */}
-        <p className="control">
+        <p className="control ">
           <span className="button is-static">
-            Race {roundNumber} of {data.customRaceData.length}
+            <span className="is-hidden-mobile"></span> {roundNumber}
+            <span className="is-hidden-mobile">&nbsp;of&nbsp;</span>
+            <span className="is-hidden-tablet">/</span>
+            {data.customRaceData.length}
           </span>
         </p>
 
         {/* Next Button */}
-        <p className="control">
+        <p className="control ">
           {nextRace ? (
             <Link
               href={`/race/${nextRace.race.sessions.race.round}`}
-              className="button"
+              className="button "
             >
-              {nextRace.race.name} →
+              <span className="is-hidden-mobile mr-1">
+                {nextRace.race.name}
+              </span>
+              <span className="is-hidden-tablet mr-1">Next</span>
+              <span>→</span>
             </Link>
           ) : (
             <button className="button" disabled>
