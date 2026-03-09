@@ -1,60 +1,52 @@
 {
-  "lastUpdated": "2026-03-02T09:35:03.357Z",
+  "lastUpdated": "2026-03-09T09:34:29.497Z",
   "race": {
-    "name": "Australian Grand Prix",
-    "circuit": "Albert Park Grand Prix Circuit",
-    "date": "2026-03-08",
-    "time": "04:00:00Z",
+    "name": "Chinese Grand Prix",
+    "circuit": "Shanghai International Circuit",
+    "date": "2026-03-15",
+    "time": "07:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-03-06",
-        "time": "01:30:00Z"
-      },
-      "fp2": {
-        "date": "2026-03-06",
-        "time": "05:00:00Z"
-      },
-      "fp3": {
-        "date": "2026-03-07",
-        "time": "01:30:00Z"
+        "date": "2026-03-13",
+        "time": "03:30:00Z"
       },
       "qualifying": {
-        "date": "2026-03-07",
-        "time": "05:00:00Z"
+        "date": "2026-03-14",
+        "time": "07:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "1",
-        "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix",
-        "raceName": "Australian Grand Prix",
+        "round": "2",
+        "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix",
+        "raceName": "Chinese Grand Prix",
         "Circuit": {
-          "circuitId": "albert_park",
-          "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit",
-          "circuitName": "Albert Park Grand Prix Circuit",
+          "circuitId": "shanghai",
+          "url": "https://en.wikipedia.org/wiki/Shanghai_International_Circuit",
+          "circuitName": "Shanghai International Circuit",
           "Location": {
-            "lat": "-37.8497",
-            "long": "144.968",
-            "locality": "Melbourne",
-            "country": "Australia"
+            "lat": "31.3389",
+            "long": "121.22",
+            "locality": "Shanghai",
+            "country": "China"
           }
         },
-        "date": "2026-03-08",
-        "time": "04:00:00Z",
+        "date": "2026-03-15",
+        "time": "07:00:00Z",
         "FirstPractice": {
-          "date": "2026-03-06",
-          "time": "01:30:00Z"
-        },
-        "SecondPractice": {
-          "date": "2026-03-06",
-          "time": "05:00:00Z"
-        },
-        "ThirdPractice": {
-          "date": "2026-03-07",
-          "time": "01:30:00Z"
+          "date": "2026-03-13",
+          "time": "03:30:00Z"
         },
         "Qualifying": {
-          "date": "2026-03-07",
-          "time": "05:00:00Z"
+          "date": "2026-03-14",
+          "time": "07:00:00Z"
+        },
+        "Sprint": {
+          "date": "2026-03-14",
+          "time": "03:00:00Z"
+        },
+        "SprintQualifying": {
+          "date": "2026-03-13",
+          "time": "07:30:00Z"
         }
       }
     }
