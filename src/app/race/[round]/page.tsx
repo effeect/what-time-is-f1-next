@@ -22,7 +22,7 @@ export async function generateMetadata(props: {
   );
 
   return {
-    metadataBase: new URL("https://oliverdimes.dev"),
+    metadataBase: new URL("https://oliverdimes.dev"), // TODO: replace with your custom domain
     alternates: {
       canonical: "/",
     },
@@ -42,11 +42,9 @@ export default async function RoundPage({
 }) {
   const { round } = await params;
   const data = await getYearRaceData();
-  // console.log(data);
   const raceEntry = data.customRaceData.find(
     (item: any) => item.race.sessions.race.round === round,
   );
-  // console.log(raceEntry);
   if (!raceEntry) {
     notFound();
   }

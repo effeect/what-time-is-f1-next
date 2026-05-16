@@ -7,7 +7,9 @@ name: Get Race Schedule
 on:
   schedule:
     - cron: '0 9 * * 1'
-  workflow_dispatch: # Needed to allow for manual workflow runs (mostly for testing)
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   build:

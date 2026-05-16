@@ -10,19 +10,19 @@ function getNextRace() {
 
 // Get the full year schedule and save it to a custom json file for rendering in next.js
 async function getYearSchedule() {
-  let currentYear = new Date().getFullYear();
-
-  // First of all, need to fetch the count for the total number of files
-  const baseUrl = `http://api.jolpi.ca/ergast/f1/${currentYear}`;
-  // Get the total count of the races for the year
-  const Races = await fetch(baseUrl, { method: "GET" })
-    .then((res) => res.json())
-    .then((data) => data.MRData.RaceTable.Races);
-  let customRaceData = [];
-
-  const nextRace = getNextRace();
-
   try {
+    const currentYear = new Date().getFullYear();
+    const baseUrl = `http://api.jolpi.ca/ergast/f1/${currentYear}`;
+
+    const yearResponse = await fetch(baseUrl, { method: "GET" });
+    if (!yearResponse.ok) {
+      throw new Error(`API returned ${yearResponse.status} ${yearResponse.statusText}`);
+    }
+    const Races = await yearResponse.json().then((data) => data.MRData.RaceTable.Races);
+
+    const nextRace = getNextRace();
+    let customRaceData = [];
+
     for (let i = 0; i < Races.length; i++) {
       let sessions = {};
       // Checking if this is a sprint weekend or not
@@ -44,11 +44,8 @@ async function getYearSchedule() {
         };
       }
 
-      // Check which event is the next race and add a true flag to the one, needed for the site
       const isNextRace =
         sessions.race.Circuit.circuitName === nextRace.race.circuit;
-      // Processed Data for each race round
-      // console.log(isNextRace);
       const customRaceDataItem = {
         race: {
           name: Races[i].raceName,
@@ -71,11 +68,10 @@ async function getYearSchedule() {
       process.cwd(),
       "public",
       "data",
-      `year_schedule.json`,
+      "year_schedule.json",
     );
 
     fs.writeFileSync(outputPath, JSON.stringify(processedData, null, 2));
-    // return data;
   } catch (error) {
     // If we hit an error when reaching the endpoint, just exit the application
     console.error("Error fetching F1 schedule:", error.message);

@@ -4,10 +4,12 @@ const path = require("path");
 
 async function getSchedule() {
   const url = "http://api.jolpi.ca/ergast/f1/current/next.json";
-  const options = { method: "GET" };
 
   try {
-    const response = await fetch(url, options);
+    const response = await fetch(url, { method: "GET" });
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status} ${response.statusText}`);
+    }
     const data = await response.json();
 
     const processedData = {
