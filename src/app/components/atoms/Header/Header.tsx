@@ -1,13 +1,17 @@
 import React from "react";
-import Link from "next/link";
+import CircuitImage from "../CircuitImage/CircuitImage";
 // Header component for the main site
 const RaceHeader = ({
   RaceName,
   CircuitName,
+  CircuitUrl,
+  CircuitId,
   Date,
 }: {
   RaceName: string;
   CircuitName: string;
+  CircuitUrl: string;
+  CircuitId?: string;
   Date: string;
 }) => {
   return (
@@ -19,8 +23,18 @@ const RaceHeader = ({
             <span className="icon">
               <i className="fas fa-flag-checkered"></i>
             </span>
-            <span className="ml-2">{CircuitName}</span>
+            <a
+              href={CircuitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2"
+            >
+              {CircuitName}
+            </a>
           </div>
+          {CircuitId ? (
+            <CircuitImage circuitId={CircuitId} circuitName={CircuitName} />
+          ) : null}
           <div className="subtitle">
             <span className="icon">
               <i className="fas fa-calendar-alt"></i>

@@ -38,6 +38,8 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
             : "Race Timetable for the " + (raceData.race.name || "Unknown Race")
         }
         CircuitName={raceData.race.circuit || "Unknown Circuit"}
+        CircuitUrl={sessionData.Circuit?.url ?? "#"}
+        CircuitId={sessionData.Circuit?.circuitId}
         Date={formatDate(sessionData.date) || "Unknown Date"}
       />
       <hr />

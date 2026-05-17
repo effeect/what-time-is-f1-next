@@ -28,6 +28,18 @@ export type RaceData = {
   };
 };
 
+export interface Circuit {
+  circuitId: string;
+  url: string;
+  circuitName: string;
+  Location: {
+    lat: string;
+    long: string;
+    locality: string;
+    country: string;
+  };
+}
+
 export interface RaceSessions {
   FirstPractice?: Session;
   SecondPractice?: Session;
@@ -35,6 +47,7 @@ export interface RaceSessions {
   Qualifying?: Session;
   Sprint?: Session;
   SprintQualifying?: Session;
+  Circuit?: Circuit;
   date: string; // The main race date
   time: string; // The main race time
 }
