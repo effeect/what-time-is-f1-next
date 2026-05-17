@@ -12,13 +12,17 @@ function getNextRace() {
 async function getYearSchedule() {
   try {
     const currentYear = new Date().getFullYear();
-    const baseUrl = `http://api.jolpi.ca/ergast/f1/${currentYear}`;
+    const baseUrl = `https://api.jolpi.ca/ergast/f1/${currentYear}`;
 
     const yearResponse = await fetch(baseUrl, { method: "GET" });
     if (!yearResponse.ok) {
-      throw new Error(`API returned ${yearResponse.status} ${yearResponse.statusText}`);
+      throw new Error(
+        `API returned ${yearResponse.status} ${yearResponse.statusText}`,
+      );
     }
-    const Races = await yearResponse.json().then((data) => data.MRData.RaceTable.Races);
+    const Races = await yearResponse
+      .json()
+      .then((data) => data.MRData.RaceTable.Races);
 
     const nextRace = getNextRace();
     let customRaceData = [];

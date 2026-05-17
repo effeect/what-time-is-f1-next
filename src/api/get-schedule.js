@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 async function getSchedule() {
-  const url = "http://api.jolpi.ca/ergast/f1/current/next.json";
+  const url = "https://api.jolpi.ca/ergast/f1/current/next.json";
 
   try {
     const response = await fetch(url, { method: "GET" });
