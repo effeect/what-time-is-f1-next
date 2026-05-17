@@ -1,6 +1,7 @@
 import React from "react";
 import { Sessions } from "@/types/session_detail";
 import TimeDisplay from "../Time/TimeDisplay";
+import DateDisplay from "../Time/DateDisplay";
 
 const SessionRow = ({ session }: { session: Sessions }) => {
   return (
@@ -10,11 +11,7 @@ const SessionRow = ({ session }: { session: Sessions }) => {
         <div>
           <p className="heading mb-1">{session.name}</p>
           <p className="title is-5">
-            {new Date(session.date).toLocaleDateString(undefined, {
-              weekday: "long",
-              day: "numeric",
-              month: "short",
-            })}
+            <DateDisplay dateTimeString={`${session.date}T${session.time}`} />
           </p>
         </div>
       </div>

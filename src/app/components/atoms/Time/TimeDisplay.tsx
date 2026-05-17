@@ -1,4 +1,3 @@
-// Needs to be done on the client side
 "use client";
 
 import { useEffect, useState } from "react";
@@ -14,16 +13,25 @@ export default function TimeDisplay({
   }, []);
 
   if (!mounted) {
-    return <span className="title is-2">--:--</span>;
+    return <span>--:--</span>;
   }
-  const time = dateTimeString;
 
-  // console.log(time);
-  // Convert to local time if needed
-  const date = new Date(`${time}`);
-  return date.toLocaleTimeString("en-US", {
+  const date = new Date(dateTimeString);
+
+  const time = date.toLocaleTimeString("en-US", {
     hour: "2-digit",
     minute: "2-digit",
     hour12: true,
   });
+
+  const tzAbbr = new Intl.DateTimeFormat("en-US", { timeZoneName: "short" })
+    .formatToParts(date)
+    .find((p) => p.type === "timeZoneName")?.value ?? "";
+
+  return (
+    <>
+      {time}{" "}
+      <span className="is-size-6 has-text-grey-light">{tzAbbr}</span>
+    </>
+  );
 }
