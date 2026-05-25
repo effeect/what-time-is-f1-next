@@ -1,52 +1,60 @@
 {
-  "lastUpdated": "2026-05-18T12:17:27.401Z",
+  "lastUpdated": "2026-05-25T12:15:10.772Z",
   "race": {
-    "name": "Canadian Grand Prix",
-    "circuit": "Circuit Gilles Villeneuve",
-    "date": "2026-05-24",
-    "time": "20:00:00Z",
+    "name": "Monaco Grand Prix",
+    "circuit": "Circuit de Monaco",
+    "date": "2026-06-07",
+    "time": "13:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-05-22",
-        "time": "16:30:00Z"
+        "date": "2026-06-05",
+        "time": "11:30:00Z"
+      },
+      "fp2": {
+        "date": "2026-06-05",
+        "time": "15:00:00Z"
+      },
+      "fp3": {
+        "date": "2026-06-06",
+        "time": "10:30:00Z"
       },
       "qualifying": {
-        "date": "2026-05-23",
-        "time": "20:00:00Z"
+        "date": "2026-06-06",
+        "time": "14:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "5",
-        "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix",
-        "raceName": "Canadian Grand Prix",
+        "round": "6",
+        "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix",
+        "raceName": "Monaco Grand Prix",
         "Circuit": {
-          "circuitId": "villeneuve",
-          "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve",
-          "circuitName": "Circuit Gilles Villeneuve",
+          "circuitId": "monaco",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco",
+          "circuitName": "Circuit de Monaco",
           "Location": {
-            "lat": "45.5",
-            "long": "-73.5228",
-            "locality": "Montreal",
-            "country": "Canada"
+            "lat": "43.7347",
+            "long": "7.42056",
+            "locality": "Monte Carlo",
+            "country": "Monaco"
           }
         },
-        "date": "2026-05-24",
-        "time": "20:00:00Z",
+        "date": "2026-06-07",
+        "time": "13:00:00Z",
         "FirstPractice": {
-          "date": "2026-05-22",
-          "time": "16:30:00Z"
+          "date": "2026-06-05",
+          "time": "11:30:00Z"
+        },
+        "SecondPractice": {
+          "date": "2026-06-05",
+          "time": "15:00:00Z"
+        },
+        "ThirdPractice": {
+          "date": "2026-06-06",
+          "time": "10:30:00Z"
         },
         "Qualifying": {
-          "date": "2026-05-23",
-          "time": "20:00:00Z"
-        },
-        "Sprint": {
-          "date": "2026-05-23",
-          "time": "16:00:00Z"
-        },
-        "SprintQualifying": {
-          "date": "2026-05-22",
-          "time": "20:30:00Z"
+          "date": "2026-06-06",
+          "time": "14:00:00Z"
         }
       }
     }
