@@ -1,59 +1,59 @@
 {
-  "lastUpdated": "2026-06-01T14:42:21.400Z",
+  "lastUpdated": "2026-06-08T12:53:31.103Z",
   "race": {
-    "name": "Monaco Grand Prix",
-    "circuit": "Circuit de Monaco",
-    "date": "2026-06-07",
+    "name": "Barcelona Grand Prix",
+    "circuit": "Circuit de Barcelona-Catalunya",
+    "date": "2026-06-14",
     "time": "13:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-06-05",
+        "date": "2026-06-12",
         "time": "11:30:00Z"
       },
       "fp2": {
-        "date": "2026-06-05",
+        "date": "2026-06-12",
         "time": "15:00:00Z"
       },
       "fp3": {
-        "date": "2026-06-06",
+        "date": "2026-06-13",
         "time": "10:30:00Z"
       },
       "qualifying": {
-        "date": "2026-06-06",
+        "date": "2026-06-13",
         "time": "14:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "6",
-        "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix",
-        "raceName": "Monaco Grand Prix",
+        "round": "7",
+        "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya",
+        "raceName": "Barcelona Grand Prix",
         "Circuit": {
-          "circuitId": "monaco",
-          "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco",
-          "circuitName": "Circuit de Monaco",
+          "circuitId": "catalunya",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya",
+          "circuitName": "Circuit de Barcelona-Catalunya",
           "Location": {
-            "lat": "43.7347",
-            "long": "7.42056",
-            "locality": "Monte Carlo",
-            "country": "Monaco"
+            "lat": "41.57",
+            "long": "2.26111",
+            "locality": "Barcelona",
+            "country": "Spain"
           }
         },
-        "date": "2026-06-07",
+        "date": "2026-06-14",
         "time": "13:00:00Z",
         "FirstPractice": {
-          "date": "2026-06-05",
+          "date": "2026-06-12",
           "time": "11:30:00Z"
         },
         "SecondPractice": {
-          "date": "2026-06-05",
+          "date": "2026-06-12",
           "time": "15:00:00Z"
         },
         "ThirdPractice": {
-          "date": "2026-06-06",
+          "date": "2026-06-13",
           "time": "10:30:00Z"
         },
         "Qualifying": {
-          "date": "2026-06-06",
+          "date": "2026-06-13",
           "time": "14:00:00Z"
         }
       }
