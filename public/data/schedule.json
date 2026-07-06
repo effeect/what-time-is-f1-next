@@ -1,52 +1,60 @@
 {
-  "lastUpdated": "2026-06-29T12:52:43.475Z",
+  "lastUpdated": "2026-07-06T12:31:40.108Z",
   "race": {
-    "name": "British Grand Prix",
-    "circuit": "Silverstone Circuit",
-    "date": "2026-07-05",
-    "time": "14:00:00Z",
+    "name": "Belgian Grand Prix",
+    "circuit": "Circuit de Spa-Francorchamps",
+    "date": "2026-07-19",
+    "time": "13:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-07-03",
+        "date": "2026-07-17",
         "time": "11:30:00Z"
       },
-      "qualifying": {
-        "date": "2026-07-04",
+      "fp2": {
+        "date": "2026-07-17",
         "time": "15:00:00Z"
+      },
+      "fp3": {
+        "date": "2026-07-18",
+        "time": "10:30:00Z"
+      },
+      "qualifying": {
+        "date": "2026-07-18",
+        "time": "14:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "9",
-        "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix",
-        "raceName": "British Grand Prix",
+        "round": "10",
+        "url": "https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix",
+        "raceName": "Belgian Grand Prix",
         "Circuit": {
-          "circuitId": "silverstone",
-          "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit",
-          "circuitName": "Silverstone Circuit",
+          "circuitId": "spa",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps",
+          "circuitName": "Circuit de Spa-Francorchamps",
           "Location": {
-            "lat": "52.0786",
-            "long": "-1.01694",
-            "locality": "Silverstone",
-            "country": "UK"
+            "lat": "50.4372",
+            "long": "5.97139",
+            "locality": "Spa",
+            "country": "Belgium"
           }
         },
-        "date": "2026-07-05",
-        "time": "14:00:00Z",
+        "date": "2026-07-19",
+        "time": "13:00:00Z",
         "FirstPractice": {
-          "date": "2026-07-03",
+          "date": "2026-07-17",
           "time": "11:30:00Z"
         },
-        "Qualifying": {
-          "date": "2026-07-04",
+        "SecondPractice": {
+          "date": "2026-07-17",
           "time": "15:00:00Z"
         },
-        "Sprint": {
-          "date": "2026-07-04",
-          "time": "11:00:00Z"
+        "ThirdPractice": {
+          "date": "2026-07-18",
+          "time": "10:30:00Z"
         },
-        "SprintQualifying": {
-          "date": "2026-07-03",
-          "time": "15:30:00Z"
+        "Qualifying": {
+          "date": "2026-07-18",
+          "time": "14:00:00Z"
         }
       }
     }

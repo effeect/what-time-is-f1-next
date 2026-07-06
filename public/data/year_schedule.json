@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T12:52:43.851Z",
+  "lastUpdated": "2026-07-06T12:31:40.825Z",
   "customRaceData": [
     {
       "race": {
@@ -556,7 +556,7 @@
             }
           }
         },
-        "isNextRace": true
+        "isNextRace": false
       }
     },
     {
@@ -618,7 +618,7 @@
             }
           }
         },
-        "isNextRace": false
+        "isNextRace": true
       }
     },
     {
