@@ -1,60 +1,52 @@
 {
-  "lastUpdated": "2026-07-20T11:30:20.873Z",
+  "lastUpdated": "2026-07-27T12:05:03.462Z",
   "race": {
-    "name": "Hungarian Grand Prix",
-    "circuit": "Hungaroring",
-    "date": "2026-07-26",
+    "name": "Dutch Grand Prix",
+    "circuit": "Circuit Park Zandvoort",
+    "date": "2026-08-23",
     "time": "13:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-07-24",
-        "time": "11:30:00Z"
-      },
-      "fp2": {
-        "date": "2026-07-24",
-        "time": "15:00:00Z"
-      },
-      "fp3": {
-        "date": "2026-07-25",
+        "date": "2026-08-21",
         "time": "10:30:00Z"
       },
       "qualifying": {
-        "date": "2026-07-25",
+        "date": "2026-08-22",
         "time": "14:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "11",
-        "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix",
-        "raceName": "Hungarian Grand Prix",
+        "round": "12",
+        "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix",
+        "raceName": "Dutch Grand Prix",
         "Circuit": {
-          "circuitId": "hungaroring",
-          "url": "https://en.wikipedia.org/wiki/Hungaroring",
-          "circuitName": "Hungaroring",
+          "circuitId": "zandvoort",
+          "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort",
+          "circuitName": "Circuit Park Zandvoort",
           "Location": {
-            "lat": "47.5789",
-            "long": "19.2486",
-            "locality": "Budapest",
-            "country": "Hungary"
+            "lat": "52.3888",
+            "long": "4.54092",
+            "locality": "Zandvoort",
+            "country": "Netherlands"
           }
         },
-        "date": "2026-07-26",
+        "date": "2026-08-23",
         "time": "13:00:00Z",
         "FirstPractice": {
-          "date": "2026-07-24",
-          "time": "11:30:00Z"
-        },
-        "SecondPractice": {
-          "date": "2026-07-24",
-          "time": "15:00:00Z"
-        },
-        "ThirdPractice": {
-          "date": "2026-07-25",
+          "date": "2026-08-21",
           "time": "10:30:00Z"
         },
         "Qualifying": {
-          "date": "2026-07-25",
+          "date": "2026-08-22",
           "time": "14:00:00Z"
+        },
+        "Sprint": {
+          "date": "2026-08-22",
+          "time": "10:00:00Z"
+        },
+        "SprintQualifying": {
+          "date": "2026-08-21",
+          "time": "14:30:00Z"
         }
       }
     }
