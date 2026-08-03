@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-27T12:05:03.880Z",
+  "lastUpdated": "2026-08-03T12:07:40.254Z",
   "customRaceData": [
     {
       "race": {
@@ -933,6 +933,68 @@
     },
     {
       "race": {
+        "name": "Bahrain Grand Prix in Malaysia",
+        "circuit": "Sepang International Circuit",
+        "date": "2026-10-04",
+        "time": "07:00:00Z",
+        "sessions": {
+          "fp1": {
+            "date": "2026-10-02",
+            "time": "02:00:00Z"
+          },
+          "fp2": {
+            "date": "2026-10-02",
+            "time": "06:00:00Z"
+          },
+          "fp3": {
+            "date": "2026-10-03",
+            "time": "06:00:00Z"
+          },
+          "qualifying": {
+            "date": "2026-10-03",
+            "time": "09:00:00Z"
+          },
+          "race": {
+            "season": "2026",
+            "round": "16",
+            "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix",
+            "raceName": "Bahrain Grand Prix in Malaysia",
+            "Circuit": {
+              "circuitId": "sepang",
+              "url": "https://en.wikipedia.org/wiki/Sepang_International_Circuit",
+              "circuitName": "Sepang International Circuit",
+              "Location": {
+                "lat": "2.76083",
+                "long": "101.738",
+                "locality": "Kuala Lumpur",
+                "country": "Malaysia"
+              }
+            },
+            "date": "2026-10-04",
+            "time": "07:00:00Z",
+            "FirstPractice": {
+              "date": "2026-10-02",
+              "time": "02:00:00Z"
+            },
+            "SecondPractice": {
+              "date": "2026-10-02",
+              "time": "06:00:00Z"
+            },
+            "ThirdPractice": {
+              "date": "2026-10-03",
+              "time": "06:00:00Z"
+            },
+            "Qualifying": {
+              "date": "2026-10-03",
+              "time": "09:00:00Z"
+            }
+          }
+        },
+        "isNextRace": false
+      }
+    },
+    {
+      "race": {
         "name": "Singapore Grand Prix",
         "circuit": "Marina Bay Street Circuit",
         "date": "2026-10-11",
@@ -956,7 +1018,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "16",
+            "round": "17",
             "url": "https://en.wikipedia.org/wiki/2026_Singapore_Grand_Prix",
             "raceName": "Singapore Grand Prix",
             "Circuit": {
@@ -1018,7 +1080,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "17",
+            "round": "18",
             "url": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
             "raceName": "United States Grand Prix",
             "Circuit": {
@@ -1080,7 +1142,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "18",
+            "round": "19",
             "url": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix",
             "raceName": "Mexico City Grand Prix",
             "Circuit": {
@@ -1142,7 +1204,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "19",
+            "round": "20",
             "url": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix",
             "raceName": "Brazilian Grand Prix",
             "Circuit": {
@@ -1204,7 +1266,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "20",
+            "round": "21",
             "url": "https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix",
             "raceName": "Las Vegas Grand Prix",
             "Circuit": {
@@ -1266,7 +1328,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "21",
+            "round": "22",
             "url": "https://en.wikipedia.org/wiki/2026_Qatar_Grand_Prix",
             "raceName": "Qatar Grand Prix",
             "Circuit": {
@@ -1328,7 +1390,7 @@
           },
           "race": {
             "season": "2026",
-            "round": "22",
+            "round": "23",
             "url": "https://en.wikipedia.org/wiki/2026_Abu_Dhabi_Grand_Prix",
             "raceName": "Abu Dhabi Grand Prix",
             "Circuit": {
