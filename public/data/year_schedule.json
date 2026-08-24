@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-17T09:25:53.790Z",
+  "lastUpdated": "2026-08-24T09:32:11.143Z",
   "customRaceData": [
     {
       "race": {
@@ -742,7 +742,7 @@
             }
           }
         },
-        "isNextRace": true
+        "isNextRace": false
       }
     },
     {
@@ -804,7 +804,7 @@
             }
           }
         },
-        "isNextRace": false
+        "isNextRace": true
       }
     },
     {
@@ -940,19 +940,19 @@
         "sessions": {
           "fp1": {
             "date": "2026-10-02",
-            "time": "02:00:00Z"
+            "time": "04:30:00Z"
           },
           "fp2": {
             "date": "2026-10-02",
-            "time": "06:00:00Z"
+            "time": "08:00:00Z"
           },
           "fp3": {
             "date": "2026-10-03",
-            "time": "06:00:00Z"
+            "time": "04:30:00Z"
           },
           "qualifying": {
             "date": "2026-10-03",
-            "time": "09:00:00Z"
+            "time": "08:00:00Z"
           },
           "race": {
             "season": "2026",
@@ -974,19 +974,19 @@
             "time": "07:00:00Z",
             "FirstPractice": {
               "date": "2026-10-02",
-              "time": "02:00:00Z"
+              "time": "04:30:00Z"
             },
             "SecondPractice": {
               "date": "2026-10-02",
-              "time": "06:00:00Z"
+              "time": "08:00:00Z"
             },
             "ThirdPractice": {
               "date": "2026-10-03",
-              "time": "06:00:00Z"
+              "time": "04:30:00Z"
             },
             "Qualifying": {
               "date": "2026-10-03",
-              "time": "09:00:00Z"
+              "time": "08:00:00Z"
             }
           }
         },
