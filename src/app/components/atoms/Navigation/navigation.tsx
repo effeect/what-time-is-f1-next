@@ -1,4 +1,11 @@
-import Link from "next/link";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import LinkButton from "@/app/components/common/LinkButton";
+
+// Bulma-style responsive visibility helpers
+const hiddenMobile = { display: { xs: "none", sm: "inline" } } as const;
+const hiddenTablet = { display: { xs: "inline", sm: "none" } } as const;
 
 const NavigationBar = ({ data, round }: { data: any; round: number }) => {
   const roundNumber = Number(round);
@@ -13,59 +20,77 @@ const NavigationBar = ({ data, round }: { data: any; round: number }) => {
   return (
     <>
       {/* Navigation Controls */}
-      <div className="field is-mobile is-grouped is-grouped-centered mt-6">
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ justifyContent: "center", mt: 6, mb: 3 }}
+      >
         {/* Previous Button */}
-        <p className="control ">
-          {prevRace ? (
-            <Link
-              href={`/race/${prevRace.race.sessions.race.round}`}
-              className="button is-fullwidth"
-            >
-              <span>←</span>
-              {/* Shows race name on Desktop, hides on Mobile */}
-              <span className="is-hidden-mobile ml-1">
-                {prevRace.race.name}
-              </span>
-              {/* Shows 'Prev' on Mobile, hides on Desktop */}
-              <span className="is-hidden-tablet ml-1">Prev</span>
-            </Link>
-          ) : (
-            <button className="button is-fullwidth" disabled>
-              ← Prev
-            </button>
-          )}
-        </p>
+        {prevRace ? (
+          <LinkButton
+            variant="outlined"
+            href={`/race/${prevRace.race.sessions.race.round}`}
+          >
+            <span>←</span>
+            {/* Shows race name on Desktop, hides on Mobile */}
+            <Box component="span" sx={{ ml: 0.5, ...hiddenMobile }}>
+              {prevRace.race.name}
+            </Box>
+            {/* Shows 'Prev' on Mobile, hides on Desktop */}
+            <Box component="span" sx={{ ml: 0.5, ...hiddenTablet }}>
+              Prev
+            </Box>
+          </LinkButton>
+        ) : (
+          <Button variant="outlined" disabled>
+            ← Prev
+          </Button>
+        )}
 
         {/* Current Status */}
-        <p className="control ">
-          <span className="button is-static">
-            <span className="is-hidden-mobile"></span> {roundNumber}
-            <span className="is-hidden-mobile">&nbsp;of&nbsp;</span>
-            <span className="is-hidden-tablet">/</span>
-            {data.customRaceData.length}
-          </span>
-        </p>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            px: 2,
+            border: 1,
+            borderColor: "divider",
+            borderRadius: 1,
+            bgcolor: "action.hover",
+            color: "text.secondary",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {roundNumber}
+          <Box component="span" sx={hiddenMobile}>
+            &nbsp;of&nbsp;
+          </Box>
+          <Box component="span" sx={hiddenTablet}>
+            /
+          </Box>
+          {data.customRaceData.length}
+        </Box>
 
         {/* Next Button */}
-        <p className="control ">
-          {nextRace ? (
-            <Link
-              href={`/race/${nextRace.race.sessions.race.round}`}
-              className="button "
-            >
-              <span className="is-hidden-mobile mr-1">
-                {nextRace.race.name}
-              </span>
-              <span className="is-hidden-tablet mr-1">Next</span>
-              <span>→</span>
-            </Link>
-          ) : (
-            <button className="button" disabled>
-              Next →
-            </button>
-          )}
-        </p>
-      </div>
+        {nextRace ? (
+          <LinkButton
+            variant="outlined"
+            href={`/race/${nextRace.race.sessions.race.round}`}
+          >
+            <Box component="span" sx={{ mr: 0.5, ...hiddenMobile }}>
+              {nextRace.race.name}
+            </Box>
+            <Box component="span" sx={{ mr: 0.5, ...hiddenTablet }}>
+              Next
+            </Box>
+            <span>→</span>
+          </LinkButton>
+        ) : (
+          <Button variant="outlined" disabled>
+            Next →
+          </Button>
+        )}
+      </Stack>
     </>
   );
 };

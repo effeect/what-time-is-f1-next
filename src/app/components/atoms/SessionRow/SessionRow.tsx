@@ -1,31 +1,40 @@
 import React from "react";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 import { Sessions } from "@/types/session_detail";
 import TimeDisplay from "../Time/TimeDisplay";
 import DateDisplay from "../Time/DateDisplay";
 
 const SessionRow = ({ session }: { session: Sessions }) => {
   return (
-    <div className="level is-mobile">
+    <Stack
+      direction="row"
+      sx={{ justifyContent: "space-between", alignItems: "center" }}
+    >
       {/* Left hand side of the container */}
-      <div className="level-left">
-        <div>
-          <p className="heading mb-1">{session.name}</p>
-          <p className="title is-5">
-            <DateDisplay dateTimeString={`${session.date}T${session.time}`} />
-          </p>
-        </div>
+      <div>
+        <Typography
+          variant="overline"
+          component="p"
+          color="text.secondary"
+          sx={{ lineHeight: 1.5 }}
+        >
+          {session.name}
+        </Typography>
+        <Typography variant="h6" component="p" sx={{ fontWeight: 600 }}>
+          <DateDisplay dateTimeString={`${session.date}T${session.time}`} />
+        </Typography>
       </div>
       {/* Right hand side of the container */}
-      <div className="level-right">
-        <div>
-          <p className="title is-4">
-            {/* Nees to be handled on the client side fyi */}
-            <TimeDisplay dateTimeString={`${session.date}T${session.time}`} />
-          </p>
-        </div>
-        {/* <p className="title is-4">{formatTimeUTC(session.time)}</p> */}
-      </div>
-    </div>
+      <Typography
+        variant="h5"
+        component="p"
+        sx={{ fontWeight: 600, textAlign: "right" }}
+      >
+        {/* Nees to be handled on the client side fyi */}
+        <TimeDisplay dateTimeString={`${session.date}T${session.time}`} />
+      </Typography>
+    </Stack>
   );
 };
 

@@ -2,7 +2,11 @@ import { RaceData } from "@/types/session_detail";
 import { sortSessions } from "@/lib/sessionSort";
 import RaceHeader from "../atoms/Header/Header";
 import SessionRow from "../atoms/SessionRow/SessionRow";
-import Link from "next/link";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import Stack from "@mui/material/Stack";
+import LinkButton from "../common/LinkButton";
 interface RaceTimetableProps {
   RaceData: RaceData;
 }
@@ -22,13 +26,13 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
   };
 
   return (
-    <div className="container my-2">
+    <Container maxWidth="md" sx={{ my: 1 }}>
       {/* Header Section, note that all the varaibles are string based */}
       {/* Could be a bit tidier but this works for the moment */}
       {!raceData.race.isNextRace ? (
-        <Link href="/" className="buttons is-link mb-4 is-centered">
-          ← Back to Next Race Schedule
-        </Link>
+        <Box sx={{ textAlign: "center", mb: 3 }}>
+          <LinkButton href="/">← Back to Next Race Schedule</LinkButton>
+        </Box>
       ) : null}
 
       <RaceHeader
@@ -39,17 +43,15 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
         }
         CircuitName={raceData.race.circuit || "Unknown Circuit"}
         CircuitUrl={sessionData.Circuit?.url ?? "#"}
-        CircuitId={sessionData.Circuit?.circuitId}
+        Country={sessionData.Circuit?.Location.country}
         Date={formatDate(sessionData.date) || "Unknown Date"}
       />
-      <hr />
-      <div className="columns is-multiline">
+      <Divider sx={{ my: 3 }} />
+      <Stack spacing={3}>
         {sessions.map((session) => (
-          <div key={session.id} className="column is-full">
-            <SessionRow session={session} />
-          </div>
+          <SessionRow key={session.id} session={session} />
         ))}
-      </div>
-    </div>
+      </Stack>
+    </Container>
   );
 }

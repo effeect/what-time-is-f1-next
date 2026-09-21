@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Typography from "@mui/material/Typography";
 
 export default function TimeDisplay({
   dateTimeString,
@@ -31,7 +32,9 @@ export default function TimeDisplay({
   return (
     <>
       {time}{" "}
-      <span className="is-size-6 has-text-grey-light">{tzAbbr}</span>
+      <Typography component="span" variant="body1" color="text.disabled">
+        {tzAbbr}
+      </Typography>
     </>
   );
 }

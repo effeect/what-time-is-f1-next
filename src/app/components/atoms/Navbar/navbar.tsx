@@ -1,15 +1,16 @@
-// Taken from Bulma examples
-import styles from "./navbar.module.css";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="container">
-        <div className={`navbar-brand ${styles.centeredBrand}`}>
-          <h1 className={`navbar-item ${styles.logoText}`}>What Time Is F1?</h1>
-        </div>
-      </div>
-    </nav>
+    <AppBar position="static" color="transparent" elevation={0}>
+      <Toolbar sx={{ justifyContent: "center", minHeight: { xs: 64 } }}>
+        <Typography component="h1" variant="h4" sx={{ fontWeight: "bold" }}>
+          What Time Is F1?
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 };
 

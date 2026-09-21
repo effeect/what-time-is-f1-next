@@ -3,6 +3,7 @@ import Navbar from "@/app/components/atoms/Navbar/navbar";
 import RaceTimetable from "@/app/components/organisms/RaceTimetable";
 import { getYearRaceData } from "@/lib/data_year";
 import { notFound } from "next/navigation";
+import Box from "@mui/material/Box";
 import NavigationBar from "@/app/components/atoms/Navigation/navigation";
 // Grab the static params for each round from the year schedule data
 export async function generateStaticParams() {
@@ -53,15 +54,20 @@ export default async function RoundPage({
   return (
     <>
       <Navbar />
-      <section className="hero is-fullheight-with-navbar">
-        <div className="hero-body">
+      <Box
+        component="section"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "calc(100vh - 64px)",
+        }}
+      >
+        <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", py: 6 }}>
           <RaceTimetable RaceData={race} />
-        </div>
-        <div className="content is-medium" style={{}}>
-          <NavigationBar data={data} round={round} />
-        </div>
+        </Box>
+        <NavigationBar data={data} round={round} />
         <Footer />
-      </section>
+      </Box>
     </>
   );
 }
