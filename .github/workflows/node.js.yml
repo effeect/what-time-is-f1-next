@@ -26,13 +26,16 @@ jobs:
     # Below is what will fetch the data, note that we don't use any node packages to so no npm install needed
     - name: Fetch Race Data
       run: |
-        node src/api/get-schedule.js 
+        node src/api/get-schedule.js
         node src/api/get-year-schedule.js
+        node src/api/get-track-maps.js
     - name: Commit and Push Changes
       run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add ./public/data/schedule.json
           git add ./public/data/year_schedule.json
+          git add ./public/data/track_map_credits.json
+          git add ./public/track-maps/
           git commit -m "chore: update generated files" || echo "No changes to commit"
           git push

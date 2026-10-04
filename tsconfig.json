@@ -30,6 +30,8 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "src/api/get-schedule.js",
+    "src/api/get-track-maps.js",
+    "src/data/circuitTrackMaps.js",
     "scripts/get-schedule.js"
   ],
   "exclude": ["node_modules"]

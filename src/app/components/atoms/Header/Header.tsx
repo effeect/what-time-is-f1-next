@@ -5,21 +5,25 @@ import Typography from "@mui/material/Typography";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { countryFlag } from "@/lib/countryFlag";
+import type { TrackMapCredit } from "@/lib/trackMap";
+import TrackMapImage from "./TrackMapImage";
 
 // Header component for the main race
-// Displays the race name, circuit name, country flag, and date of the main event
+// Displays the race name, circuit name, country flag, date, and track map of the main event
 const RaceHeader = ({
   RaceName,
   CircuitName,
   CircuitUrl,
   Country,
   Date,
+  TrackMap,
 }: {
   RaceName: string;
   CircuitName: string;
   CircuitUrl: string;
   Country?: string;
   Date: string;
+  TrackMap?: { src: string; credit?: TrackMapCredit };
 }) => {
   // Grabs the country flag emoji based on the country name
   const flag = countryFlag(Country);
@@ -67,6 +71,32 @@ const RaceHeader = ({
         <CalendarMonthIcon fontSize="small" />
         <span>Main event on {Date}</span>
       </Typography>
+      {TrackMap ? (
+        <Box sx={{ mt: 2 }}>
+          <TrackMapImage
+            src={TrackMap.src}
+            alt={`${CircuitName} circuit layout diagram`}
+          />
+          {TrackMap.credit ? (
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              sx={{ display: "block", mt: 0.5 }}
+            >
+              Map:{" "}
+              <Link
+                href={TrackMap.credit.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wikimedia Commons
+              </Link>
+              {TrackMap.credit.author ? `, ${TrackMap.credit.author}` : ""}
+              {TrackMap.credit.license ? `, ${TrackMap.credit.license}` : ""}
+            </Typography>
+          ) : null}
+        </Box>
+      ) : null}
     </Box>
   );
 };

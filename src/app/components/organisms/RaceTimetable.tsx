@@ -1,5 +1,6 @@
 import { RaceData } from "@/types/session_detail";
 import { sortSessions } from "@/lib/sessionSort";
+import { trackMapPath, getTrackMapCredits } from "@/lib/trackMap";
 import RaceHeader from "../atoms/Header/Header";
 import SessionRow from "../atoms/SessionRow/SessionRow";
 import Box from "@mui/material/Box";
@@ -15,6 +16,9 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
   const raceData = RaceData;
   const sessionData = RaceData.race.sessions.race;
   const sessions = sortSessions(RaceData);
+  const circuitId = sessionData.Circuit?.circuitId;
+  const trackMapSrc = trackMapPath(circuitId);
+  const trackMapCredit = trackMapSrc ? getTrackMapCredits()[circuitId!] : undefined;
   // Format date for display
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -45,6 +49,7 @@ export default function RaceTimetable({ RaceData }: RaceTimetableProps) {
         CircuitUrl={sessionData.Circuit?.url ?? "#"}
         Country={sessionData.Circuit?.Location.country}
         Date={formatDate(sessionData.date) || "Unknown Date"}
+        TrackMap={trackMapSrc ? { src: trackMapSrc, credit: trackMapCredit } : undefined}
       />
       <Divider sx={{ my: 3 }} />
       <Stack spacing={3}>
