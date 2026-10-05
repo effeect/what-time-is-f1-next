@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04T00:02:05.362Z",
+  "lastUpdated": "2026-10-05T17:28:05.019Z",
   "credits": {
     "albert_park": {
       "title": "File:2023 F1 CourseLayout Australia.svg",
@@ -77,37 +77,10 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
     },
-    "sepang": {
-      "title": "File:Circuit Sepang.svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Sepang.svg",
-      "author": "Rumbin",
-      "license": "Public domain"
-    },
-    "marina_bay": {
-      "title": "File:2022 F1 CourseLayout Singapore.svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Singapore.svg",
-      "author": "ごひょううべこ",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
     "vegas": {
       "title": "File:2023 Las Vegas street circuit.svg",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Las_Vegas_street_circuit.svg",
       "author": "Valentin JJ.",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
-    "losail": {
-      "title": "File:2023 F1 CourseLayout Qatar.svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_F1_CourseLayout_Qatar.svg",
-      "author": "ごひょううべこ",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
-    },
-    "yas_marina": {
-      "title": "File:2022 F1 CourseLayout Abu Dhabi.svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Abu_Dhabi.svg",
-      "author": "ごひょううべこ",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     }
