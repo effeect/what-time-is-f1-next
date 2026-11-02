@@ -1,60 +1,60 @@
 {
-  "lastUpdated": "2026-10-26T15:30:43.686Z",
+  "lastUpdated": "2026-11-02T18:52:53.322Z",
   "race": {
-    "name": "Mexico City Grand Prix",
-    "circuit": "Autódromo Hermanos Rodríguez",
-    "date": "2026-11-01",
-    "time": "20:00:00Z",
+    "name": "Brazilian Grand Prix",
+    "circuit": "Autódromo José Carlos Pace",
+    "date": "2026-11-08",
+    "time": "17:00:00Z",
     "sessions": {
       "fp1": {
-        "date": "2026-10-30",
-        "time": "18:30:00Z"
+        "date": "2026-11-06",
+        "time": "15:30:00Z"
       },
       "fp2": {
-        "date": "2026-10-30",
-        "time": "22:00:00Z"
+        "date": "2026-11-06",
+        "time": "19:00:00Z"
       },
       "fp3": {
-        "date": "2026-10-31",
-        "time": "17:30:00Z"
+        "date": "2026-11-07",
+        "time": "14:30:00Z"
       },
       "qualifying": {
-        "date": "2026-10-31",
-        "time": "21:00:00Z"
+        "date": "2026-11-07",
+        "time": "18:00:00Z"
       },
       "race": {
         "season": "2026",
-        "round": "19",
-        "url": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix",
-        "raceName": "Mexico City Grand Prix",
+        "round": "20",
+        "url": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix",
+        "raceName": "Brazilian Grand Prix",
         "Circuit": {
-          "circuitId": "rodriguez",
-          "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez",
-          "circuitName": "Autódromo Hermanos Rodríguez",
+          "circuitId": "interlagos",
+          "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit",
+          "circuitName": "Autódromo José Carlos Pace",
           "Location": {
-            "lat": "19.4042",
-            "long": "-99.0907",
-            "locality": "Mexico City",
-            "country": "Mexico"
+            "lat": "-23.7036",
+            "long": "-46.6997",
+            "locality": "São Paulo",
+            "country": "Brazil"
           }
         },
-        "date": "2026-11-01",
-        "time": "20:00:00Z",
+        "date": "2026-11-08",
+        "time": "17:00:00Z",
         "FirstPractice": {
-          "date": "2026-10-30",
-          "time": "18:30:00Z"
+          "date": "2026-11-06",
+          "time": "15:30:00Z"
         },
         "SecondPractice": {
-          "date": "2026-10-30",
-          "time": "22:00:00Z"
+          "date": "2026-11-06",
+          "time": "19:00:00Z"
         },
         "ThirdPractice": {
-          "date": "2026-10-31",
-          "time": "17:30:00Z"
+          "date": "2026-11-07",
+          "time": "14:30:00Z"
         },
         "Qualifying": {
-          "date": "2026-10-31",
-          "time": "21:00:00Z"
+          "date": "2026-11-07",
+          "time": "18:00:00Z"
         }
       }
     }
