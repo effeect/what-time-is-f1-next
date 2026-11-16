@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-09T19:14:15.974Z",
+  "lastUpdated": "2026-11-16T18:57:42.199Z",
   "credits": {
     "albert_park": {
       "title": "File:2023 F1 CourseLayout Australia.svg",
@@ -70,19 +70,18 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
-    "madring": {
-      "title": "File:Madring (2026).svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Madring_(2026).svg",
-      "author": "GabrielStella, Cherkash",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    "hungaroring": {
+      "title": "File:2022 F1 CourseLayout Hungary.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:2022_F1_CourseLayout_Hungary.svg",
+      "author": "ごひょううべこ",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
     },
-    "rodriguez": {
-      "title": "File:Autódromo Hermanos Rodríguez.svg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez.svg",
-      "author": "Will Pittenger",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    "sepang": {
+      "title": "File:Circuit Sepang.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Circuit_Sepang.svg",
+      "author": "Rumbin",
+      "license": "Public domain"
     },
     "vegas": {
       "title": "File:2023 Las Vegas street circuit.svg",
